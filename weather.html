@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weather Report</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+<div ng-app="weather" ng-controller="myCtrl">
+    <div class="head text-center">
+    	<div class="header img-responsive">
+    		<img src="https://www.juhe.cn/themes/v5/public/images/loginlogo.png"><h1>天气应用</h1>
+    		
+    		<p>{{Date.today.city}}</p>
+    		<p>{{Date.today.date_y}}</p>
+    		<p>{{Date.today.week}}</p>
+    	</div>
+    	<div class="headContent">
+    		
+    	</div>
+
+    </div>
+    <hr>
+    <div class="today text-center">
+    	<h3>今天天气</h3>
+
+    	<p>湿度:  {{Date.sk.humidity}}</p>
+    	<p>穿衣指数:  {{Date.today.dressing_index}}</p>
+    	<p>洗车指数:  {{Date.today.wash_index}}</p>
+    	<p>旅行指数:  {{Date.today.travel_index}}</p>
+    	<p>锻炼指数:  {{Date.today.exercise_index}}</p>
+    	<p>紫外线指数:  {{Date.today.uv_index}}</p>
+
+    </div>
+    <hr>
+    <div class="future text-center">
+    	<h3>未来6天天气</h3>
+    	<div class="container-fluid">
+    	<div class="row">
+    		<div class="col-md-4" ng-repeat="x in Date.future">
+    			<p>{{x.date}}</p>
+    			<p>{{x.week}}</p>
+    			<div class="row">
+    			   <div class="col-md-4">
+    			     	<p>{{x.temperature}}</p>
+    			   </div>
+    			   <div class="col-md-4">
+    			     	<p>{{x.weather}}</p>
+    			   </div>
+    			   <div class="col-md-4">
+    			   	    <p>{{x.wind}}</p>
+    			   </div>
+    			</div>
+    		</div>
+    	</div>
+    	</div>
+    </div>
+</div>
+</body>
+</html>

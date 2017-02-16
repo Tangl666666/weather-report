@@ -1,0 +1,20 @@
+
+.header p{
+	font-size: 34px;
+	
+   
+    
+}
+
+.header h1{
+	margin-top: 10px;
+	display: inline-block; 
+	padding-top: 10px;
+	vertical-align: -8px;
+	font-size: 34px;
+	color: orange;
+   
+}
+hr{
+	width: 60%;
+}
